@@ -5,3 +5,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/montserrat-bold.woff2"), url("../assets/fonts/montserrat-bold.woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
