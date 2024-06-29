@@ -23,9 +23,9 @@ html {
 }
 
 .container {
-    /*max-width: 1200px;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 10px;*/
+    padding: 0 10px;
 }
 
 a {
@@ -37,5 +37,90 @@ ul {
     list-style-type: none;
 }
 
+/************************************header**********************************/
 
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    flex-wrap: wrap;
+}
 
+.header__menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 20px;
+}
+
+.header__menu-item {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1f2041;
+}
+
+.header-arrow-services {
+    position: relative;
+    margin-right: 15px;
+}
+
+.header-arrow-services:after {
+    content: url("../assets/images/svg/nav-arrow.svg");
+    position: absolute;
+    top: 2px;
+    left: 55px;
+}
+
+.header-arrow-agreements {
+    position: relative;
+    margin-right: 15px;
+}
+
+.header-arrow-agreements:after {
+    content: url("../assets/images/svg/nav-arrow.svg");
+    position: absolute;
+    top: 2px;
+    left: 96px;
+}
+
+.header__user-nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.button-login {
+    display: inline-block;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #bc9cff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 2px solid #bc9cff;
+    border-radius: 22px;
+}
+
+.button-login:hover {
+    background: #bc9cff;
+    color: #ffffff;
+}
+
+.button-registration {
+    display: inline-block;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 2px solid #bc9cff;
+    border-radius: 22px;
+    background: #bc9cff;
+}
+
+.button-registration:hover {
+    background: #ffffff;
+    color: #bc9cff;
+}
