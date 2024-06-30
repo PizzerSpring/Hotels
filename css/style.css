@@ -115,10 +115,13 @@ ul {
     color: #bc9cff;
 }
 
-/**************************************************************/
+/***************************main***************************/
+
+.main__hotel {
+    position: relative;
+}
 
 .main__hotel-bg {
-    position: relative;
     min-height: 900px;
     background: url("../assets/images/jpg/hotel-bg.jpg") no-repeat;
     background-size: cover;
@@ -133,3 +136,110 @@ ul {
     line-height: 24px;
     max-width: 297px;
 }
+
+.main__form {
+    position: absolute;
+    border-radius: 4px;
+    top: 70px;
+    left: 140px;
+    z-index: 1;
+    width: 380px;
+    height: 374px;
+    background: #fff;
+    padding: 40px 30px 30px 30px;
+}
+
+.main__form-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: #1f2041;
+    margin-bottom: 20px;
+}
+
+.main__form-top {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.main__form-arrival-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #1f2041;
+    text-transform: uppercase;
+}
+
+.main__form-departure-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #1f2041;
+    text-transform: uppercase;
+}
+
+.main__form-arrival {
+    width: 150px;
+    height: 44px;
+    border: 1px solid rgba(31,32,62, 0.25);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31,32,62, 0.75);
+    margin-top: 5px;
+    padding: 0 15px;
+}
+
+.main__form-departure {
+    width: 150px;
+    height: 44px;
+    border: 1px solid rgba(31,32,62, 0.25);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31,32,62, 0.75);
+    margin-top: 5px;
+    padding: 0 15px;
+}
+
+.main__form-select-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #1f2041;
+    text-transform: uppercase;
+}
+
+.main__form-list {
+    width: 320px;
+    height: 44px;
+    border: 1px solid rgba(31,32,62, 0.25);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31,32,62, 0.75);
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.main__form-button {
+    display: inline-block;
+    width: 320px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    border: 2px solid #bc9cff;
+    border-radius: 22px;
+    background: #bc9cff;
+    text-align: center;
+}
+
+.main__form-button:hover {
+    color: #bc9cff;
+    background: #ffffff;
+}
+/****************************************************************/
