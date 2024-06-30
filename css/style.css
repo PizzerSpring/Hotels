@@ -16,6 +16,15 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    font-family: Montserrat, Arial, sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: rgba(31,32,62, 0.5);
+}
+
 *,
 *::after,
 *::before {
@@ -47,54 +56,40 @@ ul {
     flex-wrap: wrap;
 }
 
-.header__menu {
+.header__list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 0 20px;
 }
 
-.header__menu-item {
-    font-family: Montserrat, Arial, sans-serif;
+.header__item {
     font-size: 14px;
-    font-weight: 400;
-    color: #1f2041;
 }
 
-.header-arrow-services {
+.header-arrow {
     position: relative;
     margin-right: 15px;
 }
 
-.header-arrow-services:after {
+.header-arrow:before {
     content: url("../assets/images/svg/nav-arrow.svg");
     position: absolute;
     top: 2px;
-    left: 55px;
-}
-
-.header-arrow-agreements {
-    position: relative;
-    margin-right: 15px;
-}
-
-.header-arrow-agreements:after {
-    content: url("../assets/images/svg/nav-arrow.svg");
-    position: absolute;
-    top: 2px;
-    left: 96px;
+    right: -15px;
 }
 
 .header__user-nav-menu {
     display: flex;
     gap: 20px;
+    line-height: 17px;
 }
 
 .button-login {
     display: inline-block;
-    font-family: Montserrat, Arial, sans-serif;
     font-size: 12px;
     font-weight: 700;
+    line-height: 14px;
     color: #bc9cff;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -109,9 +104,9 @@ ul {
 
 .button-registration {
     display: inline-block;
-    font-family: Montserrat, Arial, sans-serif;
     font-size: 12px;
     font-weight: 700;
+    line-height: 14px;
     color: #ffffff;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -124,3 +119,5 @@ ul {
     background: #ffffff;
     color: #bc9cff;
 }
+
+
