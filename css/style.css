@@ -22,7 +22,7 @@ body {
     font-size: 16px;
     line-height: 1.2;
     font-weight: normal;
-    color: rgba(31,32,62, 0.5);
+    color: rgba(31, 32, 62, 0.5);
 }
 
 *,
@@ -76,7 +76,7 @@ ul {
 .header-arrow:before {
     content: url("../assets/images/svg/nav-arrow.svg");
     position: absolute;
-    top: 2px;
+    top: 1px;
     right: -15px;
 }
 
@@ -181,25 +181,27 @@ ul {
 .main__form-arrival {
     width: 150px;
     height: 44px;
-    border: 1px solid rgba(31,32,62, 0.25);
+    border: 1px solid rgba(31, 32, 62, 0.25);
     border-radius: 4px;
     font-size: 14px;
     line-height: 18px;
-    color: rgba(31,32,62, 0.75);
+    color: rgba(31, 32, 62, 0.75);
     margin-top: 5px;
     padding: 0 15px;
+    text-transform: uppercase;
 }
 
 .main__form-departure {
     width: 150px;
     height: 44px;
-    border: 1px solid rgba(31,32,62, 0.25);
+    border: 1px solid rgba(31, 32, 62, 0.25);
     border-radius: 4px;
     font-size: 14px;
     line-height: 18px;
-    color: rgba(31,32,62, 0.75);
+    color: rgba(31, 32, 62, 0.75);
     margin-top: 5px;
     padding: 0 15px;
+    text-transform: uppercase;
 }
 
 .main__form-select-label {
@@ -213,12 +215,12 @@ ul {
 .main__form-list {
     width: 320px;
     height: 44px;
-    border: 1px solid rgba(31,32,62, 0.25);
+    border: 1px solid rgba(31, 32, 62, 0.25);
     border-radius: 4px;
     font-family: Montserrat, Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
-    color: rgba(31,32,62, 0.75);
+    color: rgba(31, 32, 62, 0.75);
     margin-top: 5px;
     margin-bottom: 30px;
     padding: 0 15px;
@@ -243,4 +245,48 @@ ul {
     color: #bc9cff;
     background: #ffffff;
 }
-/****************************************************************/
+
+/**************************datepicker****************************/
+
+.ui-datepicker {
+    width: 320px;
+    height: 369px;
+    padding: 20px;
+}
+
+.ui-datepicker-header {
+    background: #ffffff;
+    border: none;
+}
+
+.ui-widget-header .ui-icon {
+    width: 0;
+    height: 0;
+}
+
+.ui-datepicker-prev {
+    background: url("../assets/images/svg/arrow_prev.svg") no-repeat;
+    background-size: 24px 24px;
+}
+
+.ui-datepicker-prev-hover {
+    cursor: pointer;
+    background: url("../assets/images/svg/arrow_prev.svg") no-repeat !important;
+    background-size: 24px 24px !important;
+    border: 1px solid #ffffff !important;
+}
+
+.ui-datepicker-next {
+    background: url("../assets/images/svg/arrow_next.svg") no-repeat;
+    background-size: 24px 24px;
+}
+
+.ui-datepicker-next-hover {
+    cursor: pointer;
+    background: url("../assets/images/svg/arrow_next.svg") no-repeat !important;
+    background-size: 24px 24px !important;
+    border: none #ffffff !important;
+    top: 2px !important;
+    right: 2px !important;
+}
+

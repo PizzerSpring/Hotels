@@ -6,8 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Toxin</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
 </head>
 <body>
 <header class="header">
@@ -45,8 +48,8 @@
         <form class="main__form" method="post" action="#">
             <h2 class="main__form-title">Найдём номера под ваши пожелания</h2>
             <fieldset class="main__form-top">
-                <label class="main__form-arrival-label" for="arrival">прибытие
-                    <input class="main__form-arrival" type="date" id="arrival" name="arrival">
+                <label class="main__form-arrival-label" for="datepicker">прибытие
+                    <input class="main__form-arrival" type="text" id="datepicker" name="arrival">
                 </label>
                 <label class="main__form-departure-label" for="departure">выезд
                     <input class="main__form-departure" type="date" id="departure" name="departure">
@@ -65,5 +68,6 @@
         </form>
     </section>
 </main>
+<script src="./js/script.js"></script>
 </body>
 </html>
