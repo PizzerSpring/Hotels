@@ -257,6 +257,7 @@ ul {
 .ui-datepicker-header {
     background: #ffffff;
     border: none;
+    margin-bottom: 30px;
 }
 
 .ui-widget-header .ui-icon {
@@ -288,5 +289,13 @@ ul {
     border: none #ffffff !important;
     top: 2px !important;
     right: 2px !important;
+}
+
+.ui-datepicker-title {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 19px;
+    color: #1f2041;
+    font-weight: 700;
+    line-height: 24px !important;
 }
 
