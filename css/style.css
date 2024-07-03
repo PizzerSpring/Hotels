@@ -291,11 +291,43 @@ ul {
     right: 2px !important;
 }
 
-.ui-datepicker-title {
+.ui-datepicker .ui-datepicker-title {
     font-family: Montserrat, Arial, sans-serif;
     font-size: 19px;
     color: #1f2041;
     font-weight: 700;
-    line-height: 24px !important;
+    line-height: 24px;
+}
+
+.ui-datepicker th {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 12px;
+    color: #bc9cff;
+    line-height: 14px;
+}
+
+.ui-datepicker td  {
+  padding: 0;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: none;
+    border: none;
+    color: rgba(31, 32, 62, 0.5);
+}
+
+.ui-datepicker td a {
+    font-family: Montserrat, Arial, sans-serif;
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 12px;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    color: #ffffff;
+    font-weight: 700;
+    background: linear-gradient(#6fcf97, #66d2ea);
+    border-radius: 22px;
 }
 
