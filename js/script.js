@@ -1,3 +1,8 @@
 $(function() {
-    $('#datepicker').datepicker();
+    $('#datepicker').datepicker({
+        showOtherMonths: true,
+        showButtonPanel: true,
+        closeText: "Очистить",
+        currentText: "Применить"
+    });
 });

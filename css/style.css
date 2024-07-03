@@ -280,6 +280,7 @@ ul {
 .ui-datepicker-next {
     background: url("../assets/images/svg/arrow_next.svg") no-repeat;
     background-size: 24px 24px;
+    right: -4px !important;
 }
 
 .ui-datepicker-next-hover {
@@ -288,7 +289,7 @@ ul {
     background-size: 24px 24px !important;
     border: none #ffffff !important;
     top: 2px !important;
-    right: 2px !important;
+    right: -4px !important;
 }
 
 .ui-datepicker .ui-datepicker-title {
@@ -316,12 +317,12 @@ ul {
     color: rgba(31, 32, 62, 0.5);
 }
 
-.ui-datepicker td a {
+.ui-datepicker td span, .ui-datepicker td a {
     font-family: Montserrat, Arial, sans-serif;
     text-align: center;
     font-size: 12px;
     line-height: 14px;
-    padding: 12px;
+    padding: 13px;
 }
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
@@ -330,4 +331,40 @@ ul {
     background: linear-gradient(#6fcf97, #66d2ea);
     border-radius: 22px;
 }
+
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
+    opacity: 0.75;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.ui-widget-content {
+    border: none;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+    text-transform: uppercase;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #bc9cff;
+    opacity: 1;
+    line-height: 14px;
+    order: 1;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-close {
+    text-transform: uppercase;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #bc9cff;
+    line-height: 14px;
+    order: 0;
+}
+
 
