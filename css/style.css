@@ -179,6 +179,7 @@ ul {
 }
 
 .main__form-arrival {
+    font-family: Montserrat, Arial, sans-serif;
     width: 150px;
     height: 44px;
     border: 1px solid rgba(31, 32, 62, 0.25);
@@ -189,9 +190,14 @@ ul {
     margin-top: 5px;
     padding: 0 15px;
     text-transform: uppercase;
+    background-image: url("../assets/images/svg/nav-arrow.svg");
+    background-position: 120px 18px;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .main__form-departure {
+    font-family: Montserrat, Arial, sans-serif;
     width: 150px;
     height: 44px;
     border: 1px solid rgba(31, 32, 62, 0.25);
@@ -202,6 +208,10 @@ ul {
     margin-top: 5px;
     padding: 0 15px;
     text-transform: uppercase;
+    background-image: url("../assets/images/svg/nav-arrow.svg");
+    background-position: 120px 18px;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .main__form-select-label {
@@ -252,6 +262,7 @@ ul {
     width: 320px;
     height: 369px;
     padding: 20px;
+    margin-top: 5px;
 }
 
 .ui-datepicker-header {
