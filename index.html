@@ -9,8 +9,15 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </head>
 <body>
 <header class="header">
@@ -54,6 +61,10 @@
                 <label class="main__form-departure-label" for="departure">выезд
                     <input class="main__form-departure datepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="departure" name="departure">
                 </label>
+                <label class="rangedate-label" for="range2">диапазон
+                    <input class="rangedate1" type="text" id="range1" name="dates">
+                    <input class="rangedate2" type="text" id="range2" name="dates">
+                </label>
             </fieldset>
             <label class="main__form-select-label" for="guests">гости
                 <select class="main__form-list" name="guests" id="guests">
@@ -70,5 +81,6 @@
 </main>
 <script src="./js/script.js"></script>
 <script src="./js/datepicker-ru.js"></script>
+<script src="./js/range.js"></script>
 </body>
 </html>

@@ -260,7 +260,7 @@ ul {
 
 .ui-datepicker {
     width: 320px;
-    height: 369px;
+    min-height: 369px;
     padding: 20px;
     margin-top: 5px;
 }
@@ -377,5 +377,81 @@ ul {
     line-height: 14px;
     order: 0;
 }
+
+.active {
+   /* border-radius: 22px;
+    background: linear-gradient(#bc9cff, #8ba4f9);*/
+}
+
+/***********************************************************/
+/*.ui-datepicker-current-day {
+    border-radius: 22px;
+    background: linear-gradient(#bc9cff, #8ba4f9);
+}*/
+
+.daterangepicker {
+    /*width: 320px;
+    min-height: 369px;
+    padding: 20px;
+    margin-top: 5px;*/
+}
+
+.daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {
+    border: none !important;
+}
+
+.daterangepicker th.prev {
+    background: url("../assets/images/svg/arrow_prev.svg") no-repeat;
+    background-size: 24px 24px;
+
+}
+
+/*.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+    background: url("../assets/images/svg/arrow_prev.svg") no-repeat !important;
+    background-size: 24px 24px;
+}*/
+
+.daterangepicker .drp-selected {
+    display: none !important;
+}
+
+.daterangepicker.show-calendar .drp-buttons {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+/* REMOVE SECOND CALENDAR */
+
+.daterangepicker .drp-calendar.right {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+}
+
+.daterangepicker .drp-calendar.right tbody {
+    display: none !important;
+}
+
+.daterangepicker .drp-calendar.right thead > tr:nth-child(2) {
+    display: none !important;
+}
+
+.daterangepicker .drp-calendar.right th.month {
+    display: none !important;
+}
+
+.daterangepicker .drp-calendar.right .calendar-table {
+    background: transparent !important;
+}
+
+.daterangepicker .daterangepicker.ltr .ranges, .daterangepicker.ltr .drp-calendar {
+    float: none !important;
+}
+
+.daterangepicker .drp-calendar.right .daterangepicker_input {
+    position: absolute !important;
+}
+
+/* REMOVE SECOND CALENDAR */
 
 
