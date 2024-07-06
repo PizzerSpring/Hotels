@@ -1,6 +1,6 @@
 $(function () {
 
-    let arrival;
+    /*let arrival;
     let departure;
 
     $('.datepicker').datepicker({
@@ -26,7 +26,7 @@ $(function () {
                 console.log(new Date(i).toISOString().substr(0, 10))
             }
         }
-    });
+    });*/
 
 
     // var currentDate = $( "#arrival" ).datepicker( "getDate" );

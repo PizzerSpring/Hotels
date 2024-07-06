@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
@@ -56,17 +56,45 @@
             <h2 class="main__form-title">Найдём номера под ваши пожелания</h2>
             <fieldset class="main__form-top">
                 <label class="main__form-arrival-label" for="arrival">прибытие
-                    <input class="main__form-arrival datepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="arrival" name="arrival">
+                    <input class="main__form-arrival datepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="arrival"
+                           name="arrival">
                 </label>
                 <label class="main__form-departure-label" for="departure">выезд
-                    <input class="main__form-departure datepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="departure" name="departure">
+                    <input class="main__form-departure datepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="departure"
+                           name="departure">
                 </label>
                 <label class="rangedate-label" for="range2">диапазон
                     <input class="rangedate1" type="text" id="range1" name="dates">
                     <input class="rangedate2" type="text" id="range2" name="dates">
                 </label>
             </fieldset>
+            <!---->
             <label class="main__form-select-label" for="guests">гости
+                <input type="text" class="main__form-list" name="guests" id="guests">
+                <div class="list-menu">
+                    <div class="list-flex">
+                        <p>stroke</p>
+                        <button class="minus count1">-</button>
+                        <p class="count">2</p>
+                        <button class="plus count2">+</button>
+                    </div>
+                    <div class="list-flex">
+                        <p>stroke</p>
+                        <button class="minus">-</button>
+                        <p class="count">1</p>
+                        <button class="plus">+</button>
+                    </div>
+                    <div class="list-flex">
+                        <p>stroke</p>
+                        <button class="minus">-</button>
+                        <p class="count">1</p>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+
+            </label>
+            <!---->
+            <!--<label class="main__form-select-label" for="guests">гости
                 <select class="main__form-list" name="guests" id="guests">
                     <option value="">Сколько гостей</option>
                     <option value="1">1</option>
@@ -74,13 +102,15 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
-            </label>
+            </label>-->
             <a class="main__form-button" href="#">подобрать номер</a>
         </form>
     </section>
 </main>
 <script src="./js/script.js"></script>
-<script src="./js/datepicker-ru.js"></script>
-<script src="./js/range.js"></script>
+<script src="./js/dropdown.js"></script>
+<!--<script src="./js/datepicker-ru.js"></script>-->
+<!--<script src="./js/range.js"></script>-->
+
 </body>
 </html>

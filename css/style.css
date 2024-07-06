@@ -234,6 +234,42 @@ ul {
     margin-top: 5px;
     margin-bottom: 30px;
     padding: 0 15px;
+    background: url("../assets/images/svg/nav-arrow.svg") no-repeat;
+    background-position: 270px 18px;
+    cursor: pointer;
+}
+
+.active-list {
+    display: none;
+}
+
+.list-flex {
+    display: flex;
+}
+
+.minus {
+    display: inline-block;
+    border: 1px solid #1f2041;
+    border-radius: 22px;
+    background: #ffffff;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.incr {
+    border: 1px solid #bc9cff;
+}
+
+.plus {
+    display: inline-block;
+    border: 1px solid #1f2041;
+    border-radius: 22px;
+    background: #ffffff;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+.decr {
+    border: 1px solid #bc9cff;
 }
 
 .main__form-button {
@@ -376,11 +412,6 @@ ul {
     color: #bc9cff;
     line-height: 14px;
     order: 0;
-}
-
-.active {
-   /* border-radius: 22px;
-    background: linear-gradient(#bc9cff, #8ba4f9);*/
 }
 
 /***********************************************************/
