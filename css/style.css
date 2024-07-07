@@ -247,7 +247,7 @@ ul {
     display: flex;
 }
 
-.minus {
+.minus1, .minus2 {
     display: inline-block;
     border: 1px solid #1f2041;
     border-radius: 22px;
@@ -260,7 +260,7 @@ ul {
     border: 1px solid #bc9cff;
 }
 
-.plus {
+.plus1, .plus2 {
     display: inline-block;
     border: 1px solid #1f2041;
     border-radius: 22px;
