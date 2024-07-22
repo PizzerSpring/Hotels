@@ -296,12 +296,27 @@ ul {
 /**************************calendar****************************/
 
 .main__form-calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(31, 32, 62, 0.25);
+    border-radius: 4px;
     position: absolute;
     top: 70px;
     left: 0;
     z-index: 1;
     background: #ffffff;
+    width: 320px;
+    min-height: 369px;
+    padding: 20px;
+}
 
+
+.main__form-year-month {
+    font-size: 19px;
+    color: #1f2041;
+    font-weight: 700;
+    line-height: 23px;
 }
 
 .hide-calendar {

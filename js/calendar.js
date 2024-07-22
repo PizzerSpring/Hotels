@@ -15,9 +15,16 @@ $(function () {
         let day = new Date(year, mon);
         // console.log(l.getDate());
 
+        /*Number of month to string */
+
+        const monthsName = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+
+        const selectedMonthName = monthsName[month];
+
         let table = `
-    <capton>${month}.${year}</capton>
     <table>
+      <caption class="main__form-year-month">${selectedMonthName} ${year}</caption>
+      <thead>
       <tr>
         <th>Пн</th>
         <th>Вт</th>
@@ -27,6 +34,8 @@ $(function () {
         <th>Сб</th>
         <th>Вс</th>
       </tr>
+      </thead>
+    
       <tr>
 `;
 
@@ -238,8 +247,6 @@ $(function () {
             })
         })
     })*/
-
-
 
 
 });
