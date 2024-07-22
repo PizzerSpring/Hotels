@@ -160,6 +160,7 @@ ul {
 .main__form-top {
     display: flex;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .main__form-arrival-label {
@@ -295,6 +296,11 @@ ul {
 /**************************calendar****************************/
 
 .main__form-calendar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 1;
+    background: #ffffff;
 
 }
 

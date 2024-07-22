@@ -2,8 +2,8 @@ $(function () {
     function createCalendar(year, month) {
         const calendar = document.querySelector('.main__form-calendar');
 
-        /*let mon = month - 1;
-        let d = new Date(year, mon);
+        /*
+
         let today = new Date();
         let nowMonth = today.getMonth() + 1;
         let date = today.getDate();
@@ -11,9 +11,11 @@ $(function () {
         // console.log(nowMonth);
 
         let l = new Date(year, month - 1, 0);*/
+        let mon = month - 1;
+        let day = new Date(year, mon);
         // console.log(l.getDate());
 
-     /*   let table = `
+        let table = `
     <capton>${month}.${year}</capton>
     <table>
       <tr>
@@ -26,7 +28,7 @@ $(function () {
         <th>Вс</th>
       </tr>
       <tr>
-`;*/
+`;
 
 
         /*for (let i = 0; i < getDay(d); i++) {
@@ -41,19 +43,20 @@ $(function () {
         }*/
         //console.log(date);
 
-       /* while (d.getMonth() == mon) {
-            if (d.getDate() === date && (d.getMonth() + 1) === monthCurrent) {
+        while (day.getMonth() == mon) {
+            table += '<td>' + day.getDate() + '</td>'
+            /*if (d.getDate() === date && (d.getMonth() + 1) === monthCurrent) {
                 // console.log(d.getMonth() + 1);
                 table += '<td class="act">' + d.getDate() + '</td>'
             } else {
                 table += '<td class="curr">' + d.getDate() + '</td>';
-            }
+            }*/
 
-            if (getDay(d) % 7 == 6) {
+            if (getDay(day) % 7 == 6) {
                 table += '<tr></tr>';
             }
-            d.setDate(d.getDate() + 1);
-        }*/
+            day.setDate(day.getDate() + 1);
+        }
 
         /*if (getDay(d) !== 0) {
             for (let i = getDay(d); i < 7; i++) {
@@ -64,9 +67,9 @@ $(function () {
 
         }*/
 
-       /* table += `</tr></table>`;
+        table += `</tr></table>`;
         calendar.innerHTML = table;
-        // console.log(d.getMonth());*/
+        // console.log(d.getMonth());
 
 
     }
@@ -77,11 +80,11 @@ $(function () {
         return day - 1;
     }
 
-    /*let callData = new Date();
+    let callData = new Date();
     let callYear = callData.getFullYear();
     let callMonth = callData.getMonth() + 1;
 
-    createCalendar(callYear, callMonth);*/
+    createCalendar(callYear, callMonth);
 
     const showCal = document.querySelector('.main__form-show-calendar');
     const inputArrival = document.querySelector('.main__form-arrival');
