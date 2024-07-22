@@ -71,11 +71,11 @@ $(function () {
 
     }
 
-    /*function getDay(date) {
+    function getDay(date) {
         let day = date.getDay();
         if (day === 0) day = 7;
         return day - 1;
-    }*/
+    }
 
     /*let callData = new Date();
     let callYear = callData.getFullYear();
