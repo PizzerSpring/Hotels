@@ -235,7 +235,7 @@ ul {
     margin-bottom: 30px;
     padding: 0 15px;
     background: url("../assets/images/svg/nav-arrow.svg") no-repeat;
-    background-position: 270px 18px;
+    background-position: 288px 18px;
     cursor: pointer;
 }
 
@@ -294,6 +294,13 @@ ul {
 
 /**************************calendar****************************/
 
+.main__form-calendar {
+
+}
+
+.hide-calendar {
+    display: none;
+}
 
 
 

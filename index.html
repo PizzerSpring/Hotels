@@ -14,10 +14,6 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </head>
 <body>
 <header class="header">
@@ -56,13 +52,16 @@
             <h2 class="main__form-title">Найдём номера под ваши пожелания</h2>
             <fieldset class="main__form-top">
                 <label class="main__form-arrival-label" for="arrival">прибытие
-                    <input class="main__form-arrival datepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="arrival"
+                    <input class="main__form-arrival" placeholder="ДД.ММ.ГГГГ" type="text" id="arrival"
                            name="arrival">
                 </label>
                 <label class="main__form-departure-label" for="departure">выезд
-                    <input class="main__form-departure datepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="departure"
+                    <input class="main__form-departure" placeholder="ДД.ММ.ГГГГ" type="text" id="departure"
                            name="departure">
                 </label>
+                <div class="main__form-show-calendar">
+                    <div class="main__form-calendar"></div>
+                </div>
             </fieldset>
             <!---->
             <label class="main__form-select-label" for="guests">гости
