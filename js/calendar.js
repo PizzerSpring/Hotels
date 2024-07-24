@@ -125,11 +125,10 @@ $(function () {
 
     const topInputs = document.querySelector('.main__form-top');
     document.addEventListener('click', (e) => {
-        if(e.target === inputArrival || topInputs.contains(e.target)) {
+        if(e.target === inputArrival || topInputs.contains(e.target) || e.target.classList.contains('main__form-prev-month') || e.target.classList.contains('main__form-next-month')) {
             return;
         } else {
             showCal.classList.add('hide-calendar');
-            console.log('miss');
         }
     })
 
