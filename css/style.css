@@ -328,12 +328,26 @@ ul {
     padding: 12px;
 }
 
-.main__form-calendar td {
+.main__form-calendar td.main__form-current-days {
     text-align: center;
     font-size: 12px;
     color: rgba(31, 32, 62, 0.5);
     line-height: 15px;
     padding: 12px;
+    cursor: pointer;
+}
+
+.main__form-prevnext-month {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(31, 32, 62, 0.25);
+    line-height: 15px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.current-date {
+
 }
 
 .hide-calendar {

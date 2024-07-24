@@ -8,14 +8,12 @@ $(function () {
         let nowMonth = today.getMonth() + 1;
         let date = today.getDate();
         let monthCurrent = today.getMonth() + 1;
-        // console.log(nowMonth);
-
-        let l = new Date(year, month - 1, 0);*/
+        // console.log(nowMonth);*/
         let mon = month - 1;
         let day = new Date(year, mon);
-        // console.log(l.getDate());
+        let datesPrevMonth = new Date(year, mon, 0);
 
-        /*Number of month to string */
+        // Number of month to string
 
         const monthsName = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
@@ -39,26 +37,25 @@ $(function () {
       <tr>
 `;
 
+        // days of prev month
 
-        /*for (let i = 0; i < getDay(d); i++) {
-            //console.log(getDay(d));
-            //console.log(d.getDate());
-            // console.log(l.getDate() - l.getDay() + 1);
-            let o = l.getDate() - l.getDay() + 1;
-            // console.log(o);
-            const y = Number(o) + i;
-            table += '<td>' + y + '</td>';
+        for (let i = 0; i < getDay(day); i++) {
+            let startPrevMonthDates = datesPrevMonth.getDate() - datesPrevMonth.getDay() + 1;
+            const date = Number(startPrevMonthDates) + i;
+            table += '<td class="main__form-prevnext-month">' + date + '</td>';
 
-        }*/
+        }
         //console.log(date);
 
+        // days of current month
+
         while (day.getMonth() == mon) {
-            table += '<td>' + day.getDate() + '</td>'
-            /*if (d.getDate() === date && (d.getMonth() + 1) === monthCurrent) {
-                // console.log(d.getMonth() + 1);
-                table += '<td class="act">' + d.getDate() + '</td>'
+            table += '<td class="main__form-current-days">' + day.getDate() + '</td>'
+            /*if (day.getDate() === date && (day.getMonth() + 1) === monthCurrent) {
+                // console.log(day.getMonth() + 1);
+                table += '<td class="main__form-current-days current-date">' + day.getDate() + '</td>'
             } else {
-                table += '<td class="curr">' + d.getDate() + '</td>';
+                table += '<td class="main__form-current-days">' + day.getDate() + '</td>';
             }*/
 
             if (getDay(day) % 7 == 6) {
@@ -67,18 +64,19 @@ $(function () {
             day.setDate(day.getDate() + 1);
         }
 
-        /*if (getDay(d) !== 0) {
-            for (let i = getDay(d); i < 7; i++) {
-                //console.log(getDay(d));
-                table += '<td>' + d.getDate() + '</td>';
-                d.setDate(d.getDate() + 1);
+        // days of next month
+
+        if (getDay(day) !== 0) {
+            for (let i = getDay(day); i < 7; i++) {
+                table += '<td class="main__form-prevnext-month">' + day.getDate() + '</td>';
+                day.setDate(day.getDate() + 1);
             }
 
-        }*/
+        }
 
         table += `</tr></table>`;
         calendar.innerHTML = table;
-        // console.log(d.getMonth());
+        // console.log(day.getMonth());
 
 
     }
