@@ -17,7 +17,13 @@ $(function () {
 
         let table = `
     <table>
-      <caption class="main__form-year-month">${selectedMonthName} ${year}</caption>
+      <caption>
+      <div>
+      <span class="main__form-prev-month"></span>
+      <span class="main__form-year-month">${selectedMonthName} ${year}</span>
+      <span class="main__form-next-month"></span>
+      </div>
+      </caption>
       <thead>
       <tr>
         <th>Пн</th>
@@ -42,7 +48,7 @@ $(function () {
 
         }
 
-        // days of current month
+        // days of current month and current date
 
         while (day.getMonth() == mon) {
             if (day.getDate() === currentDate && (day.getMonth() + 1) === currentMonth) {
@@ -70,6 +76,28 @@ $(function () {
         table += `</tr></table>`;
         calendar.innerHTML = table;
 
+        const prevMonthBtn = document.querySelector('.main__form-prev-month');
+        const nextMonthBtn = document.querySelector('.main__form-next-month');
+
+        prevMonthBtn.addEventListener('click', () => {
+            if (month === 1) {
+                month = 13;
+                year--;
+            }
+            month--;
+            createCalendar(year, month);
+        })
+
+        nextMonthBtn.addEventListener('click', () => {
+            if (month === 12) {
+                month = 0;
+                year++;
+            }
+            month++;
+            createCalendar(year, month);
+        })
+
+
     }
 
     function getDay(date) {
@@ -89,66 +117,6 @@ $(function () {
     inputArrival.addEventListener('click', () => {
         showCal.classList.toggle('hide-calendar');
     })
-
-    /*const showCal = document.querySelector('.showCal');
-    showCal.addEventListener('click', () => {
-        // console.log(44)
-    })
-
-    const prev = document.querySelector('.prev');
-    const next = document.querySelector('.next');
-
-    const cal1 = document.querySelector('.cal1');
-    const cal2 = document.querySelector('.cal2');
-
-    cal1.addEventListener('click', () => {
-        showCal.classList.toggle('hide');
-    })
-
-    cal2.addEventListener('click', () => {
-        showCal.classList.toggle('hide');
-    })
-
-    const apply = document.querySelector('.apply');
-    const cancel = document.querySelector('.cancel');
-
-
-    cancel.addEventListener('click', () => {
-        showCal.classList.toggle('hide');
-        cal1.value = '';
-        cal2.value = '';
-    })
-
-
-//console.log(createCalendar('body',2024, 7));
-    let n = new Date().getMonth() + 1;
-    let y = new Date().getFullYear();
-
-    prev.addEventListener('click', () => {
-        if (n === 1) {
-            n = 13;
-            y--;
-        }
-        n--;
-        createCalendar(y, n);
-        // console.log(n);
-    })
-
-    next.addEventListener('click', () => {
-        if (n === 12) {
-            n = 0;
-            y++;
-        }
-        n++;
-        createCalendar(y, n);
-        // console.log(n);
-    })
-
-    let callData = new Date();
-    let callYear = callData.getFullYear();
-    let callMonth = callData.getMonth() + 1;
-
-    createCalendar(callYear, callMonth);*/
 
 //range for datepicker
 

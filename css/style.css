@@ -313,6 +313,7 @@ ul {
 
 
 .main__form-year-month {
+    display: inline-block;
     font-size: 19px;
     color: #1f2041;
     font-weight: 700;
@@ -344,6 +345,28 @@ ul {
     line-height: 15px;
     padding: 12px;
     cursor: pointer;
+}
+
+.main__form-prev-month {
+    display: inline-block;
+    background: url("../assets/images/svg/arrow_prev.svg");
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-top: 2px;
+}
+.main__form-next-month {
+    display: inline-block;
+    background: url("../assets/images/svg/arrow_next.svg");
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.main__form-calendar caption div{
+    display: flex;
+    justify-content: space-between;
 }
 
 .main__form-calendar td.current-date {
