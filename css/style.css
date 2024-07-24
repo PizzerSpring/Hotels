@@ -317,11 +317,30 @@ ul {
     color: #1f2041;
     font-weight: 700;
     line-height: 23px;
+    margin-bottom: 30px;
+}
+
+.main__form-calendar th {
+    font-size: 12px;
+    color: #bc9cff;
+    font-weight: 700;
+    line-height: 15px;
+    padding: 12px;
+}
+
+.main__form-calendar td {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(31, 32, 62, 0.5);
+    line-height: 15px;
+    padding: 12px;
 }
 
 .hide-calendar {
     display: none;
 }
+
+
 
 
 

@@ -19,7 +19,7 @@ $(function () {
 
         const monthsName = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
-        const selectedMonthName = monthsName[month];
+        const selectedMonthName = monthsName[mon];
 
         let table = `
     <table>
