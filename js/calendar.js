@@ -2,16 +2,12 @@ $(function () {
     function createCalendar(year, month) {
         const calendar = document.querySelector('.main__form-calendar');
 
-        /*
-
-        let today = new Date();
-        let nowMonth = today.getMonth() + 1;
-        let date = today.getDate();
-        let monthCurrent = today.getMonth() + 1;
-        // console.log(nowMonth);*/
         let mon = month - 1;
         let day = new Date(year, mon);
         let datesPrevMonth = new Date(year, mon, 0);
+        let today = new Date();
+        let currentDate = today.getDate();
+        let currentMonth = today.getMonth() + 1;
 
         // Number of month to string
 
@@ -45,18 +41,15 @@ $(function () {
             table += '<td class="main__form-prevnext-month">' + date + '</td>';
 
         }
-        //console.log(date);
 
         // days of current month
 
         while (day.getMonth() == mon) {
-            table += '<td class="main__form-current-days">' + day.getDate() + '</td>'
-            /*if (day.getDate() === date && (day.getMonth() + 1) === monthCurrent) {
-                // console.log(day.getMonth() + 1);
+            if (day.getDate() === currentDate && (day.getMonth() + 1) === currentMonth) {
                 table += '<td class="main__form-current-days current-date">' + day.getDate() + '</td>'
             } else {
                 table += '<td class="main__form-current-days">' + day.getDate() + '</td>';
-            }*/
+            }
 
             if (getDay(day) % 7 == 6) {
                 table += '<tr></tr>';
@@ -76,8 +69,6 @@ $(function () {
 
         table += `</tr></table>`;
         calendar.innerHTML = table;
-        // console.log(day.getMonth());
-
 
     }
 

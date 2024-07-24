@@ -346,8 +346,13 @@ ul {
     cursor: pointer;
 }
 
-.current-date {
-
+.main__form-calendar td.current-date {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 15px;
+    background: linear-gradient(#6fcf97, #66d2ea);
+    border-radius: 50%;
 }
 
 .hide-calendar {
