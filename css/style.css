@@ -417,7 +417,15 @@ ul {
 
 .main__form-btn-disabled {
     color: rgba(31, 32, 62, 0.5);
-    cursor: none;
+}
+
+.main__form-calendar td.main__form-current-days.main__form-start-date {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 15px;
+    background: linear-gradient(#bc9cff, #8ba4f9);
+    border-radius: 50%;
 }
 
 

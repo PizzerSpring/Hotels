@@ -76,10 +76,12 @@ $(function () {
         table += `</tr>
         </table>
         <div class="main__form-btns">
-        <button class="main__form-clear">Очистить</button>\`
-        <button class="main__form-apply">Применить</button>
+        <button class="main__form-clear main__form-btn-disabled">Очистить</button>\`
+        <button class="main__form-apply main__form-btn-disabled">Применить</button>
         </div>`;
         calendar.innerHTML = table;
+
+        // prev next months
 
         const prevMonthBtn = document.querySelector('.main__form-prev-month');
         const nextMonthBtn = document.querySelector('.main__form-next-month');
@@ -100,6 +102,38 @@ $(function () {
             }
             month++;
             createCalendar(year, month);
+        })
+
+        // range
+
+        const clear = document.querySelector('.main__form-clear');
+        const apply = document.querySelector('.main__form-apply');
+
+        clear.disabled = true;
+        apply.disabled = true;
+
+        /*clear.addEventListener('click', () => {
+
+        })
+
+        apply.addEventListener('click', () => {
+
+        })*/
+
+        let startDate = '';
+        let endDate = '';
+
+        const rangeDays = document.querySelectorAll('.main__form-calendar td');
+
+        rangeDays.forEach(item => {
+            item.addEventListener('click', (e) => {
+                if(startDate === '') {
+                    item.classList.toggle('main__form-start-date');
+                    startDate = item.innerHTML;
+                } else {
+
+                }
+            })
         })
 
 
@@ -130,7 +164,7 @@ $(function () {
 
     const topInputs = document.querySelector('.main__form-top');
     document.addEventListener('click', (e) => {
-        if(e.target === inputArrival || topInputs.contains(e.target) || e.target.classList.contains('main__form-prev-month') || e.target.classList.contains('main__form-next-month')) {
+        if (e.target === inputArrival || topInputs.contains(e.target) || e.target.classList.contains('main__form-prev-month') || e.target.classList.contains('main__form-next-month')) {
             return;
         } else {
             showCal.classList.add('hide-calendar');
