@@ -73,7 +73,12 @@ $(function () {
 
         }
 
-        table += `</tr></table>`;
+        table += `</tr>
+        </table>
+        <div class="main__form-btns">
+        <button class="main__form-clear">Очистить</button>\`
+        <button class="main__form-apply">Применить</button>
+        </div>`;
         calendar.innerHTML = table;
 
         const prevMonthBtn = document.querySelector('.main__form-prev-month');
