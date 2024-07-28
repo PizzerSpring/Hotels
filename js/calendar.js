@@ -112,34 +112,48 @@ $(function () {
         clear.disabled = true;
         apply.disabled = true;
 
-        /*clear.addEventListener('click', () => {
-
-        })
-
-        apply.addEventListener('click', () => {
-
-        })*/
-
         let startDate = '';
         let endDate = '';
+        let startDateId = '';
+        let endDateId = '';
 
         const rangeDays = document.querySelectorAll('.main__form-calendar td');
+
+        // setting id for rangeDays
+
+        for (let i = 0; i < rangeDays.length; i++) {
+            rangeDays[i].setAttribute("id", i);
+        }
 
         rangeDays.forEach(item => {
             item.addEventListener('click', (e) => {
                 if (startDate === '') {
                     item.classList.toggle('main__form-start-date');
                     startDate = item.innerHTML;
+                    startDateId = item.id;
+                    console.log(startDateId);
+                    const startIdEl = document.getElementById(startDateId);
+                    console.log(startIdEl);
                     clear.disabled = false;
                 } else {
                     if (endDate === '') {
                         item.classList.toggle('main__form-end-date');
                         endDate = item.innerHTML;
+                        endDateId = item.id;
+                        console.log(endDateId);
+                        const endIdEl = document.getElementById(endDateId);
+                        console.log(endIdEl);
+                        let difId = endDateId - startDateId;
+                        for(let i = +startDateId + 1; i < endDateId; i++) {
+                            const allElId = document.getElementById(i);
+                            allElId.classList.toggle('main__form-range');
+                        }
                         apply.disabled = false;
                         apply.classList.toggle('main__form-btn-disabled');
                     } else {
                         startDate = '';
                         endDate = '';
+                        startDateId = item.id;
                         apply.disabled = true;
                         apply.classList.toggle('main__form-btn-disabled');
                         item.classList.toggle('main__form-start-date');
@@ -151,6 +165,10 @@ $(function () {
                         Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
                             // console.log(el);
                             el.classList.remove('main__form-end-date');
+                        });
+                        Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function(el) {
+                            // console.log(el);
+                            el.classList.remove('main__form-range');
                         });
 
                         item.classList.toggle('main__form-start-date');
@@ -193,7 +211,6 @@ $(function () {
                     apply.disabled = true;
                 }
             });
-
         })
 
 

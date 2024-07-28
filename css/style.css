@@ -437,6 +437,10 @@ ul {
     border-radius: 50%;
 }
 
+.main__form-calendar td.main__form-range {
+    background: rgba(188, 156, 255, 0.25);
+}
+
 
 
 
