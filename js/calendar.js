@@ -127,13 +127,73 @@ $(function () {
 
         rangeDays.forEach(item => {
             item.addEventListener('click', (e) => {
-                if(startDate === '') {
+                if (startDate === '') {
                     item.classList.toggle('main__form-start-date');
                     startDate = item.innerHTML;
+                    clear.disabled = false;
                 } else {
+                    if (endDate === '') {
+                        item.classList.toggle('main__form-end-date');
+                        endDate = item.innerHTML;
+                        apply.disabled = false;
+                        apply.classList.toggle('main__form-btn-disabled');
+                    } else {
+                        startDate = '';
+                        endDate = '';
+                        apply.disabled = true;
+                        apply.classList.toggle('main__form-btn-disabled');
+                        item.classList.toggle('main__form-start-date');
 
+                        Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
+                            // console.log(el);
+                            el.classList.remove('main__form-start-date');
+                        });
+                        Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
+                            // console.log(el);
+                            el.classList.remove('main__form-end-date');
+                        });
+
+                        item.classList.toggle('main__form-start-date');
+                        startDate = item.innerHTML;
+                    }
                 }
             })
+
+        })
+
+        const showCal = document.querySelector('.main__form-show-calendar');
+
+        const inputArrival = document.querySelector('.main__form-arrival');
+        const inputDeparture = document.querySelector('.main__form-departure');
+
+        apply.addEventListener('click', (e) => {
+            e.preventDefault();
+            inputArrival.value = startDate;
+            inputDeparture.value = endDate;
+            console.log('apply')
+            showCal.classList.add('hide-calendar');
+        })
+
+        clear.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
+                el.classList.remove('main__form-start-date');
+            });
+            Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
+                el.classList.remove('main__form-end-date');
+            });
+            startDate = '';
+            endDate = '';
+            clear.disabled = true;
+
+            Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
+                if(el.classList.contains('main__form-start-date') || el.classList.contains('main__form-end-date') || !apply.disabled) {
+                    apply.classList.toggle('main__form-btn-disabled');
+                    apply.disabled = true;
+                }
+            });
+
         })
 
 
