@@ -118,6 +118,8 @@ $(function () {
         let endDateId = '';
 
         const rangeDays = document.querySelectorAll('.main__form-calendar td');
+        const currentDateRange = document.querySelector('.current-date');
+
 
         // setting id for rangeDays
 
@@ -127,24 +129,20 @@ $(function () {
 
         rangeDays.forEach(item => {
             item.addEventListener('click', (e) => {
+                if (item.id < currentDateRange.id) {
+                    return;
+                }
                 if (startDate === '') {
                     item.classList.toggle('main__form-start-date');
                     startDate = item.innerHTML;
                     startDateId = item.id;
-                    console.log(startDateId);
-                    const startIdEl = document.getElementById(startDateId);
-                    console.log(startIdEl);
                     clear.disabled = false;
                 } else {
                     if (endDate === '') {
                         item.classList.toggle('main__form-end-date');
                         endDate = item.innerHTML;
                         endDateId = item.id;
-                        console.log(endDateId);
-                        const endIdEl = document.getElementById(endDateId);
-                        console.log(endIdEl);
-                        let difId = endDateId - startDateId;
-                        for(let i = +startDateId + 1; i < endDateId; i++) {
+                        for (let i = +startDateId + 1; i < endDateId; i++) {
                             const allElId = document.getElementById(i);
                             allElId.classList.toggle('main__form-range');
                         }
@@ -159,15 +157,12 @@ $(function () {
                         item.classList.toggle('main__form-start-date');
 
                         Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
-                            // console.log(el);
                             el.classList.remove('main__form-start-date');
                         });
                         Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
-                            // console.log(el);
                             el.classList.remove('main__form-end-date');
                         });
-                        Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function(el) {
-                            // console.log(el);
+                        Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
                             el.classList.remove('main__form-range');
                         });
 
@@ -175,6 +170,19 @@ $(function () {
                         startDate = item.innerHTML;
                     }
                 }
+                /*console.log(startDate);
+                console.log(endDate);
+                if (startDate > endDate) {
+                    let temp = startDate;
+                    startDate = endDate;
+                    endDate = temp;
+                    apply.disabled = false;
+                    const startIdEl = document.getElementById(startDateId);
+                    const endIdEl = document.getElementById(endDateId);
+                    console.log(startIdEl);
+                    console.log(endIdEl);
+                }*/
+
             })
 
         })
@@ -201,12 +209,15 @@ $(function () {
             Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
                 el.classList.remove('main__form-end-date');
             });
+            Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
+                el.classList.remove('main__form-range');
+            });
             startDate = '';
             endDate = '';
             clear.disabled = true;
 
             Array.from(document.querySelectorAll('.main__form-calendar td')).forEach(function (el) {
-                if(el.classList.contains('main__form-start-date') || el.classList.contains('main__form-end-date') || !apply.disabled) {
+                if (el.classList.contains('main__form-start-date') || el.classList.contains('main__form-end-date') || !apply.disabled) {
                     apply.classList.toggle('main__form-btn-disabled');
                     apply.disabled = true;
                 }
@@ -248,92 +259,10 @@ $(function () {
         }
     })
 
-//range for datepicker
-
-    /*let start = '';
-    let end = '';
-    let count = 0;
-    let startId = '';
-    let endId = '';
-
-
-    const td = document.querySelectorAll('td');
-    for (let i = 0; i < td.length; i++) {
-        td[i].setAttribute("id", i);
-    }
-
-//console.log(td);
-    td.forEach(item => {
-        item.addEventListener('click', (e) => {
-            // e.target.classList.toggle('sel');
-            const tdSel = document.querySelectorAll('td.sel');
-
-            /!*for(let i = 0; i < tdSel.length; i++) {
-                tdSel[0] !== item ? tdSel[0].classList.remove('sel') : null
-            }*!/
-
-            if(start === '') {
-                item.classList.toggle('sel');
-                start = item.innerHTML;
-                startId = item.id;
-                console.log(startId);
-                const startIdEl = document.getElementById(startId);
-                console.log(startIdEl);
-            } else {
-                if(end === '') {
-                    item.classList.toggle('end');
-                    end = item.innerHTML;
-                    endId = item.id;
-                    console.log(endId);
-                    let difId = endId - startId;
-                    //console.log(startId);
-                    for(let i = +startId + 1; i < endId; i++) {
-                        const allElId = document.getElementById(i);
-                        allElId.classList.toggle('range');
-                    }
-
-                } else {
-                    //item.classList.remove('sel');
-                    // item.classList.remove('end');
-                    start = '';
-                    end = '';
-                    startId = item.id;
-                    //endId = '';
-
-                    Array.from(document.querySelectorAll('td')).forEach(function(el) {
-                        // console.log(el);
-                        el.classList.remove('sel');
-                    });
-                    Array.from(document.querySelectorAll('td')).forEach(function(el) {
-                        // console.log(el);
-                        el.classList.remove('end');
-                    });
-                    Array.from(document.querySelectorAll('td')).forEach(function(el) {
-                        // console.log(el);
-                        el.classList.remove('range');
-                    });
-                    item.classList.toggle('sel');
-                    start = item.innerHTML;
-                }
-            }
-
-            /!*if(start > end) {
-                let b = end;
-                end = start;
-                start = b;
-            }*!/
-
-            // console.log(start);
-            // console.log(end);
-
-            // console.log(tdSel);
-
-            apply.addEventListener('click', () => {
-                cal1.value = start;
-                cal2.value = end;
-            })
-        })
-    })*/
-
-
 });
+
+/*if(start > end) {
+            let b = end;
+            end = start;
+            start = b;
+        }*/
