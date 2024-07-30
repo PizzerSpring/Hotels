@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/reset.css">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" href="css/air-datepicker.css"/>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
@@ -52,7 +53,7 @@
             <h2 class="main__form-title">Найдём номера под ваши пожелания</h2>
             <fieldset class="main__form-top">
                 <label class="main__form-arrival-label" for="arrival">прибытие
-                    <input class="main__form-arrival" placeholder="ДД.ММ.ГГГГ" type="text" id="arrival"
+                    <input class="main__form-arrival" id="airdatepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="arrival"
                            name="arrival">
                 </label>
                 <label class="main__form-departure-label" for="departure">выезд
@@ -98,7 +99,8 @@
         </form>
     </section>
 </main>
-<script src="js/calendar.js"></script>
+<script src="js/air-datepicker.js"></script>
+<script src="js/aircalendar.js"></script>
 <!--<script src="./js/dropdown.js"></script>-->
 </body>
 </html>

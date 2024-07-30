@@ -242,12 +242,12 @@ $(function () {
     const showCal = document.querySelector('.main__form-show-calendar');
     const inputArrival = document.querySelector('.main__form-arrival');
     inputArrival.addEventListener('click', () => {
-        showCal.classList.remove('hide-calendar');
+       // showCal.classList.remove('hide-calendar');
     })
 
     const inputDeparture = document.querySelector('.main__form-departure');
     inputDeparture.addEventListener('click', () => {
-        showCal.classList.remove('hide-calendar');
+        //showCal.classList.remove('hide-calendar');
     })
 
     const topInputs = document.querySelector('.main__form-top');
