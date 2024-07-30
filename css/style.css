@@ -443,9 +443,23 @@ ul {
 
 
 
+/*********************************air-calendar**************************/
+.air-datepicker {
+    min-height: 369px;
+    padding: 20px;
+}
 
+.air-datepicker-nav {
+    margin-bottom: 30px;
+}
 
-/***********************************************************/
+.air-datepicker-nav--title {
+    font-size: 19px;
+    color: #1f2041;
+    font-weight: 700;
+    line-height: 23px;
+}
+/*************************************************************************/
 
 
 
