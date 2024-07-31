@@ -486,8 +486,19 @@ ul {
 }
 
 .air-datepicker--buttons, .air-datepicker--time {
-    border-top: none;
+    border-top: none; !important;
 }
+
+.air-datepicker-cell.-selected- {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    background: linear-gradient(#bc9cff, #8ba4f9);
+}
+.air-datepicker-cell.-focus-{
+    border-radius: 50%;
+}
+
 /*************************************************************************/
 
 
