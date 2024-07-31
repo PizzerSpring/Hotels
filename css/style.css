@@ -410,7 +410,6 @@ ul {
     display: inline-block;
     text-transform: uppercase;
     font-size: 12px;
-    color: #bc9cff;
     font-weight: 700;
     line-height: 15px;
 }
@@ -454,10 +453,40 @@ ul {
 }
 
 .air-datepicker-nav--title {
+    font-family: Montserrat, Arial, sans-serif;
     font-size: 19px;
     color: #1f2041;
     font-weight: 700;
     line-height: 23px;
+    text-transform: capitalize;
+}
+.air-datepicker-body--day-name {
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 15px;
+}
+
+.air-datepicker-cell {
+    font-family: Montserrat, Arial, sans-serif;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(31, 32, 62, 0.5);
+    line-height: 15px;
+    padding: 12px;
+}
+
+.air-datepicker-cell.-current- {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 15px;
+    background: linear-gradient(#6fcf97, #66d2ea);
+    border-radius: 50%;
+}
+
+.air-datepicker--buttons, .air-datepicker--time {
+    border-top: none;
 }
 /*************************************************************************/
 
